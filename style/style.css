@@ -1,0 +1,208 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+}
+
+#canvasContainer {
+    position: relative;
+    visibility: hidden;
+    background-color: black;
+}
+
+#startScreen {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-image: url('../resources/final_images/intro_background.png');
+    animation-name: scroll;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+
+#dist {
+	color: white;
+	z-index: 20;
+	position: absolute;
+	border-top: -200px;
+    left:50px;
+}
+
+#username {
+    position: absolute;
+    text-align: center;
+    padding: 150px 0px 0px 150px;
+}
+
+label {
+    color: #5dcece;
+    font-size: 50px;
+}
+
+#user_input {
+    padding: 12px 20px;
+    font-size: 40px;
+}
+
+#launch_button {
+    position: absolute;
+    font-size: 100px;
+    padding: 50px 50px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    z-index: 5;
+}
+
+#launch_button:hover {
+    background-color: #5dcece
+}
+
+#launch {
+    visibility: hidden;
+    color: white;
+    z-index: 20;
+    position: absolute;
+    border-top: -200px;
+    left: 50px;
+}
+
+#start {
+    position: absolute;
+    font-size: 100px;
+    padding: 50px 50px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    z-index: 5;
+
+}
+
+#start:hover{
+   background-color: #5dcece
+}
+
+#rocket {
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    animation-name: move;
+    animation-duration: 7s;
+    animation-iteration-count: initial;
+    animation-timing-function: ease-in;
+}
+
+.canvas {
+    position: absolute;
+}
+
+#gameOverWindow {
+    position: relative;
+    background-size: cover;
+    /*background-image: url('../resources/placeholders/starry-background.png');*/
+    animation-name: scroll;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+    background: linear-gradient(rgba(255,255,255,.2), rgba(255,255,255,.2)), url('../resources/placeholders/starry-background.png');
+}
+
+#play_again {
+    color: black;
+    opacity: 1;
+    width: 200px;
+    height: 200px;
+    margin: 0px;
+    border-radius: 20%;
+    font-size: 50px;
+}
+
+#play_again:hover {
+    background-color: #5dcece;
+}
+#play_again:active {
+    transform: translateY(4px);
+}
+
+#twitter {
+    opacity: 1;
+    width: 200px;
+    height: 200px;
+    margin: 0px;
+    padding: 0px;
+    border-radius:10%;
+}
+#twitter:hover {
+    opacity: 0.8;
+}
+#twitter:active {
+    transform: translateY(4px);
+}
+
+#game_over {
+    color: #5dcece;
+    font-size: 100px;
+    font-weight: bold;
+    display: inline-block;
+    width: 100%;
+    height: 100px;
+    margin: 0px;
+    padding: 50px 0px 0px 0px;
+}
+
+#game_over_buttons {
+    display: inline-block;
+    width: 40%;
+    margin: 0px;
+    padding: 50px 0px 0px 0px;
+}
+
+#leader_board {
+    font-size: 30px;
+    color: white;
+    display: inline-block;
+    width: 60%;
+    margin: 0px;
+    padding: 0px;
+    float: right;
+}
+
+@keyframes scroll {
+    0% {
+        background-position: bottom;
+    }
+
+    100% {
+        background-position: top;
+    }
+}
+
+@keyframes move {
+    0% {
+        top: 90%;
+    }
+    100% {
+        top: -100px;
+    }
+}

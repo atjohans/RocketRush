@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="./style/style.css" />
+
+
+<body>
+    <div id="startScreen">
+        <h1 id=launch hidden>LAUNCHING</h1>
+        <button id="launch_button">LAUNCH</button>
+        <img id="rocket" src='./resources/final_images/Rocket.png' width="100" height="125" />
+    </div>
+    <div id="canvasContainer">
+        <h1 id="dist">Distance Travelled: 0</h1>
+        <div id="username">
+            <label for="user_input">USERNAME:</label>
+            <input type="text" id="user_input" />
+        </div>
+
+        <button id="start">RocketRush!</button>
+    </div>
+    <div id="gameOverWindow">
+
+        <div id="game_over">Game Over!</div>
+        <br />
+        <div id="game_over_buttons">
+            <button id="play_again">Play Again?</button>
+            <br/> <br/> <br/>
+            <a id="twitterButton" href="https://twitter.com/intent/tweet?text=Can%20you%20beat%20my%20high-score?%20&hashtags=RocketRush">
+                <img id="twitter" src='./resources/final_images/tweeter.png' width="100" height="100" />
+            </a>
+        </div>
+        <div id="leader_board">
+            <h1>Top 10 scores!</h1>
+            <ol>
+                <li id="score_1"></li>
+                <li id="score_2"></li>
+                <li id="score_3"></li>
+                <li id="score_4"></li>
+                <li id="score_5"></li>
+                <li id="score_6"></li>
+                <li id="score_7"></li>
+                <li id="score_8"></li>
+                <li id="score_9"></li>
+                <li id="score_10"></li>
+            </ol>
+        </div>
+
+    </div>
+
+</body>
+
+
+<script src='./scripts/jquery.min.js'></script>
+<script src="./scripts/entities.js"></script>
+<script src="./scripts/renderer.js"></script>
+<script src="./scripts/control.js"></script>
+<script src="./scripts/entityManager.js"></script>
+<script src="./scripts/Sound.js"></script>
+<script src="./scripts/fuelGuage.js"></script>
+<script src="./scripts/globals.js"></script>
+<script src="./scripts/resize.js"></script>
+
+<!---main must be loaded last -->
+<script src="./scripts/main.js"></script>
